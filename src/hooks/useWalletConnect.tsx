@@ -8,6 +8,7 @@ const connector = new WalletConnect({
 });
 
 export const connectWallet = async () => {
+  console.log(connector);
   if (!connector.connected && !connector.handshakeTopic) {
     await connector.createSession();
   } else {
